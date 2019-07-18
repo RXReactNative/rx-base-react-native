@@ -20,9 +20,20 @@ import RXTheme      from './js/component/RXTheme/RXTheme';
 
 import RXPlatform   from './js/component/RXUtil/RXPlatform';
 import RXDate       from './js/component/RXUtil/RXDate';
-import RXNumber     from './js/component/RXUtil/RXNumber';
 import RXString     from './js/component/RXUtil/RXString';
 import RXColor,{RANDOM_COLOR} from './js/component/RXUtil/RXColor';
+import {
+  RXNumberObj,
+  RXNumberStringCleanUp,
+  RXNumberStringComma,
+  RXNumberCommentDecimal,
+  RXNumberCommentADecimal,
+  RXNumberStringDecimal,
+  RXNumberDecimal,
+
+  LESS_THAN,
+  GREATER_THAN
+} from './js/component/RXUtil/RXNumber';
 
 export default {
   RXButton,
@@ -41,8 +52,17 @@ export default {
 
   RXPlatform,
   RXDate,
-  RXNumber,
   RXString,
   RXColor,
   RANDOM_COLOR,
+
+  RXNumberObj,
+  RXNumberStringCleanUp,
+  RXNumberStringComma,
+  RXNumberCommentDecimal,
+  RXNumberCommentADecimal,
+  RXNumberStringDecimal,
+  RXNumberDecimal,
+  LESS_THAN,
+  GREATER_THAN
 }

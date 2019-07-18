@@ -110,7 +110,7 @@
    if(numStr === '') return '0.00'
    if(numStr === '0') return '0.00'
 
-   if(isNotANumber(numStr)) {
+   if(isNumber(numStr)) {
      //数字
      numStr = numStr.toString();
    }
@@ -176,7 +176,7 @@ export function RXNumberDecimal(num = 0){
 /**
  * 一般不会用到这个
  */
-export function isNotANumber(inputData) {
+export function isNumber(inputData) {
 　　//isNaN(inputData)不能判断空串或一个空格
 　　//如果是一个空串或是一个空格，而isNaN是做为数字0进行处理的，而parseInt与parseFloat是返回一个错误消息，这个isNaN检查不严密而导致的。
 　　if (parseFloat(inputData).toString() == "NaN") {

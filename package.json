@@ -1,6 +1,6 @@
 {
   "name": "rx-base-react-native",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "React-Native base component",
   "main": "index.js",
   "scripts": {
@@ -15,13 +15,13 @@
   ],
   "author": "srxboys (https://github.com/srxboys)",
   "license": "MIT",
-  "homepage": "https://github.com/RXReactNative/rx-base-react-native/blob/master/README.md",
   "repository": {
       "type": "git",
       "url": "git@github.com:RXReactNative/rx-base-react-native.git"
   },
   "dependencies": {
-    "react-native-keyboard-aware-scroll-view": "*"
+    "react-native-keyboard-aware-scroll-view": "*",
+    "prop-types": "*"
   },
   "peerDependencies": {
     "react": ">=16.2.0",

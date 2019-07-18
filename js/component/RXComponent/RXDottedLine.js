@@ -1,5 +1,5 @@
 /**
- * @this RXDottedLine : 虚线直线
+ * @this RXDottedLine : 虚线
  *
  * author : srxboys
  * @flow  
