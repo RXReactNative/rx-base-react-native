@@ -1,13 +1,12 @@
 /**
  * rx-base-react-native
- * 
+ *
  * srxboys
  */
 declare module 'rx-base-react-native' {
   import { Component } from 'react'
   import {
     ViewStyle,
-    ViewProps,
     TextProps,
     FlatListProps,
     ARTSurfaceProps,
@@ -19,7 +18,7 @@ declare module 'rx-base-react-native' {
   
   interface RXTouchableProps extends TouchableOpacityProps { }
   interface RXButtonProps extends RXTouchableProps {
-    //image location
+    // image location
     type?: 'top' | 'bottom' | 'left' | 'right'
 
     title?: string | number | JSX.Element
@@ -39,34 +38,34 @@ declare module 'rx-base-react-native' {
     space?: number
   }
   
-  //Button
+  // Button
   export class RXTouchable extends Component<RXTouchableProps, any> { }
   export class RXButton extends Component<RXButtonProps, any> { }
  
-  //DottedLine
+  // DottedLine
   export class RXDottedLine extends Component<ARTSurfaceProps, any> { 
     strokeWidth?: number
     strokeDash?: [number]
     strokeColor?: string
   }
 
-  //ScrollView
+  // ScrollView
   interface RXScrollViewProps extends KeyboardAwareScrollViewProps { }
   export class RXScrollView extends Component<RXScrollViewProps, any> { }
   
-  //FlatList
+  // FlatList
   interface RXFlatListProps<ItemT> extends FlatListProps<ItemI> {
     pageSize?: number
     didMountRefresh?: boolean
-    onPullDown: Function //return promise
-    onPullUp?: Function //return promise
+    onPullDown: Function // return promise
+    onPullUp?: Function // return promise
   }
   export class RXFlatList<ItemT> extends Component<RXFlatListProps<ItemT>, any> { }
 
-  //Text
+  // Text
   export class RXText extends Component<TextProps, any> { }
 
-  //TextInput
+  // TextInput
   interface RXTextInputProps extends TextInputProperties {
     type: string | 'text'| 'number'| 'password'
   }
@@ -83,21 +82,21 @@ declare module 'rx-base-react-native' {
   export class RXDate {
     /**
       * Example:
-      formatDate(new Date().getTime());                              //2017-05-12 10:05:44
-      formatDate(new Date(12322), 'YY年MM月DD日');                    //2017年05月12日
-      formatDate(new Date().getTime(), '今天是YY/MM/DD hh:mm:ss');    //今天是2017/05/12 10:07:45
+      formatDate(new Date().getTime());                              // 2017-05-12 10:05:44
+      formatDate(new Date(12322), 'YY年MM月DD日');                    // 2017年05月12日
+      formatDate(new Date().getTime(), '今天是YY/MM/DD hh:mm:ss');    // 今天是2017/05/12 10:07:45
    */
     FormatString: (timeInval: string | number, format: string) => string
-    //"星期一 ~ 星期日"
+    // "星期一 ~ 星期日"
     getWeek: (date: Date) => string
   }
 
   // string: format
   export class RXString {
-    //是否是 字符串
+    // 是否是 字符串
     isString: (str: string) => boolean
 
-    //字符串 替换 
+    // 字符串 替换 
     replacePos: (
       str: string, 
       pos: number, 
@@ -106,13 +105,14 @@ declare module 'rx-base-react-native' {
     ) => string
   }
 
-  //RXNumber
-  let fsData = {numStr: string, local:number}
-  export function RXNumberObj() : fsData
+  // RXNumber
+  export const fsData = {numStr: string, local: number}
+
+  export function RXNumberObj() :fsData
   /**
-   *   @this  字符串数字 净化(返回样式only 数字和点) 【目前大部分用于去掉逗号】
+   * @this  字符串数字 净化(返回样式only 数字和点) 【目前大部分用于去掉逗号】
    *
-   *   @return  RXNumberObj()
+   * @return  RXNumberObj()
    */
   export function RXNumberStringCleanUp() :fsData
 
@@ -142,9 +142,9 @@ declare module 'rx-base-react-native' {
 
   export function isNumber(str: string | number) : boolean
 
-  //a <= b
+  // a <= b
   export function LESS_THAN(a: number, b: number) : boolean
 
-  //a >= b
+  // a >= b
   export function GREATER_THAN(a: number, b: number) : boolean
 }

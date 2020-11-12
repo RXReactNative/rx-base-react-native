@@ -1,21 +1,19 @@
 /**
- * @this RXScrollView 
+ * @this RXScrollView
  *
  * author : srxboys
- * @flow  
+ * @flow
  */
-'use strict';
-import React, { Component } from "react";
-import { } from 'react-native';
+import React, { Component } from 'react'
+import {} from 'react-native'
 
 import {
   KeyboardAwareScrollView,
-} from 'react-native-keyboard-aware-scroll-view';
+} from 'react-native-keyboard-aware-scroll-view'
 
 export default class RXScrollView extends Component {
-
   constructor(props) {
-    super(props);
+    super(props)
   }
 
   static propTypes = {
@@ -29,14 +27,14 @@ export default class RXScrollView extends Component {
   }
 
   render() {
-    let { extraScrollHeight, keyboardShouldPersistTaps, ...others } = this.props;
+    let { extraScrollHeight, keyboardShouldPersistTaps, ...others } = this.props
 
     if (!extraScrollHeight) {
-      extraScrollHeight = 40;
+      extraScrollHeight = 40
     }
 
     if (keyboardShouldPersistTaps === 'never') {
-      keyboardShouldPersistTaps = 'handled';
+      keyboardShouldPersistTaps = 'handled'
     }
 
     return (

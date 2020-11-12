@@ -26,3 +26,6 @@ Podfile.lock
 .project
 .settings
 .classpath
+
+yarn.lock
+package-lock.json

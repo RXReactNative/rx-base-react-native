@@ -1,21 +1,20 @@
 /**
- * @this RXFlatList : 
+ * @this RXFlatList
  *
  * author : srxboys
- * @flow  
+ * @flow
  */
-'use strict';
-import React, { Component } from "react";
+import React, { Component } from 'react'
 import {
   FlatList,
   RefreshControl
-} from 'react-native';
+} from 'react-native'
 
-import PropTypes from 'prop-types';
+import PropTypes from 'prop-types'
 
 export default class RXFlatList extends Component {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       pageNo: 1,
       refreshing: false,
@@ -27,8 +26,8 @@ export default class RXFlatList extends Component {
     ...FlatList.propTypes,
     pageSize: PropTypes.number,
     didMountRefresh: PropTypes.bool,
-    onPullDown: PropTypes.func, //return promise
-    onPullUp: PropTypes.func,   //return promise,then（return [noMore data] / [data]: 返回是否没有更多数据）
+    onPullDown: PropTypes.func, // return promise
+    onPullUp: PropTypes.func, // return promise,then（return [noMore data] / [data]: 返回是否没有更多数据）
   }
 
   static defaultProps = {
@@ -38,7 +37,7 @@ export default class RXFlatList extends Component {
   }
 
   _pullDownRefresh = () => {
-    if (!this.props.onPullDown) return;
+    if (!this.props.onPullDown) return
     if (!this.state.refreshing) {
       this.setState({
         pageNo: 1,
@@ -66,7 +65,7 @@ export default class RXFlatList extends Component {
   _pullUpRefresh = () => {
     if (!this.props.onPullUp) return
     if (!this.state.refreshing && !this.state.noMoreData) {
-      const pageNo = this.state.pageNo + 1;
+      const pageNo = this.state.pageNo + 1
       this.setState({
         pageNo: pageNo,
         refreshing: true,
@@ -90,7 +89,7 @@ export default class RXFlatList extends Component {
   }
 
   render() {
-    let { refreshControl, ...others } = this.props;
+    let { refreshControl, ...others } = this.props
 
     if (!refreshControl) {
       refreshControl = <RefreshControl
@@ -99,7 +98,7 @@ export default class RXFlatList extends Component {
     }
 
     return (
-      <FlatList  {...others}
+      <FlatList {...others}
         refreshControl={refreshControl}
       />
     )

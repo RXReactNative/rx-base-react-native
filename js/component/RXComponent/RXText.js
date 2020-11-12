@@ -2,14 +2,13 @@
  * @this RXText :
  *
  * author : srxboys
- * @flow  
+ * @flow
  */
-'use strict';
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import {
   StyleSheet,
   Text,
-} from 'react-native';
+} from 'react-native'
 
 export default class RXText extends Component {
   static propTypes = {
@@ -21,7 +20,7 @@ export default class RXText extends Component {
   }
 
   render() {
-    const { children, style, allowFontScaling, ...others } = this.props;
+    const { children, style, allowFontScaling, ...others } = this.props
     return (
       <Text {...others}
         style={[styles.container].concat(style)}
@@ -29,12 +28,11 @@ export default class RXText extends Component {
       >
         {children}
       </Text>
-    );
+    )
   }
 }
 
 const styles = StyleSheet.create({
   container: {
-
   },
-});
+})

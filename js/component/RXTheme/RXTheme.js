@@ -1,35 +1,40 @@
 /**
- * @this RXTheme : 
+ * @this RXTheme
  *
  * author : srxboys
- * @flow  
- * 
+ * @flow
+ *
  * use
  * App.js
   export default class App extends Component {
     constructor(props) {
-      super(props);
+      super(props)
       ...
-      //RXTheme.set(RXThemeDefault); // default Theme  === RXThemeDefault
-      RXTheme.set(RXJDThemeDefault); // setting new Theme
+      //RXTheme.set(RXThemeDefault) // default Theme  === RXThemeDefault
+      RXTheme.set(RXJDThemeDefault) // setting new Theme
     }
     ...
   }
  *
  *
  */
-import RXThemeDefault from './RXThemeDefault';
+import RXThemeDefault from './RXThemeDefault'
 
-var RXTheme = {
+const RXTheme = {
   themes: {
     default: RXThemeDefault,
   },
 
   set: function (theme) {
-    Object.assign(this, theme);
+    if (theme != RXThemeDefault) {
+      Object.assign(this, RXThemeDefault, theme)
+    }
+    else {
+      Object.assign(this, theme)
+    }
   },
-};
+}
 
-RXTheme.set(RXTheme.themes.default);
+RXTheme.set(RXThemeDefault)
 
-module.exports = RXTheme;
+module.exports = RXTheme

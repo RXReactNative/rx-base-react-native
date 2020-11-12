@@ -1,12 +1,11 @@
 /**
- * @this RXThemeDefault : 
+ * @this RXThemeDefault
  *
  * author : srxboys
- * @flow  
+ * @flow
  */
 export default {
-
-  //RXButton
+  // RXButton
   btnImageTitleSpace: 5,
   btnDisabledOpacity: 0.65,
   btnTitleColor: '#32312D',

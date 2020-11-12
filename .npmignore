@@ -1,0 +1,5 @@
+.gitmodules
+.gitattributes
+.github
+node_modules
+.eslintrc.js

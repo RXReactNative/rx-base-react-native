@@ -1,27 +1,27 @@
 /**
- * @this rx-base-react-native : 
+ * @this rx-base-react-native
  *
  * author : srxboys
- * @flow 
+ * @flow
  */
 
-import RXButton     from './js/component/RXComponent/RXButton';
-import RXDottedLine from './js/component/RXComponent/RXDottedLine';
+import RXButton from './js/component/RXComponent/RXButton'
+import RXDottedLine from './js/component/RXComponent/RXDottedLine'
 
-import RXScrollView from './js/component/RXComponent/RXScrollView';
-import RXFlatList   from './js/component/RXComponent/RXFlatList';
+import RXScrollView from './js/component/RXComponent/RXScrollView'
+import RXFlatList from './js/component/RXComponent/RXFlatList'
 
-import RXText       from './js/component/RXComponent/RXText';
-import RXTextInput  from './js/component/RXComponent/RXTextInput';
+import RXText from './js/component/RXComponent/RXText'
+import RXTextInput from './js/component/RXComponent/RXTextInput'
 
-import RXTouchable  from './js/component/RXComponent/RXTouchable';
+import RXTouchable from './js/component/RXComponent/RXTouchable'
 
-import RXTheme      from './js/component/RXTheme/RXTheme';
+import RXTheme from './js/component/RXTheme/RXTheme'
 
-import RXPlatform   from './js/component/RXUtil/RXPlatform';
-import RXDate       from './js/component/RXUtil/RXDate';
-import RXString     from './js/component/RXUtil/RXString';
-import RXColor,{RANDOM_COLOR} from './js/component/RXUtil/RXColor';
+import RXPlatform from './js/component/RXUtil/RXPlatform'
+import RXDate from './js/component/RXUtil/RXDate'
+import RXString from './js/component/RXUtil/RXString'
+import RXColor, { RANDOM_COLOR } from './js/component/RXUtil/RXColor'
 import {
   RXNumberObj,
   RXNumberStringCleanUp,
@@ -33,7 +33,7 @@ import {
 
   LESS_THAN,
   GREATER_THAN
-} from './js/component/RXUtil/RXNumber';
+} from './js/component/RXUtil/RXNumber'
 
 export default {
   RXButton,
