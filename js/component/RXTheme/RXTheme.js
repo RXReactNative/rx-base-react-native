@@ -26,10 +26,9 @@ const RXTheme = {
   },
 
   set: function (theme) {
-    if (theme != RXThemeDefault) {
+    if (theme !== RXThemeDefault) {
       Object.assign(this, RXThemeDefault, theme)
-    }
-    else {
+    } else {
       Object.assign(this, theme)
     }
   },
