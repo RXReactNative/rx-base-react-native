@@ -15,7 +15,7 @@ declare module 'rx-base-react-native' {
   } from 'react-native'
 
   import { KeyboardAwareScrollViewProps } from 'react-native-keyboard-aware-scroll-view';
-  
+
   interface RXTouchableProps extends TouchableOpacityProps { }
   interface RXButtonProps extends RXTouchableProps {
     // image location
@@ -37,13 +37,13 @@ declare module 'rx-base-react-native' {
 
     space?: number
   }
-  
+
   // Button
   export class RXTouchable extends Component<RXTouchableProps, any> { }
   export class RXButton extends Component<RXButtonProps, any> { }
- 
+
   // DottedLine
-  export class RXDottedLine extends Component<ARTSurfaceProps, any> { 
+  export class RXDottedLine extends Component<ARTSurfaceProps, any> {
     strokeWidth?: number
     strokeDash?: [number]
     strokeColor?: string
@@ -52,7 +52,7 @@ declare module 'rx-base-react-native' {
   // ScrollView
   interface RXScrollViewProps extends KeyboardAwareScrollViewProps { }
   export class RXScrollView extends Component<RXScrollViewProps, any> { }
-  
+
   // FlatList
   interface RXFlatListProps<ItemT> extends FlatListProps<ItemI> {
     pageSize?: number
@@ -67,17 +67,17 @@ declare module 'rx-base-react-native' {
 
   // TextInput
   interface RXTextInputProps extends TextInputProperties {
-    type: string | 'text'| 'number'| 'password'
+    type: string | 'text' | 'number' | 'password'
   }
-  export class RXTextInput extends Component<RXTextInputProps, any> { 
+  export class RXTextInput extends Component<RXTextInputProps, any> {
     /**
      * focus() 、 blur() 、 clear()...
      */
 
-    // 
+    //
     isFocused: () => boolean
   }
- 
+
   // date: format
   export class RXDate {
     /**
@@ -96,37 +96,37 @@ declare module 'rx-base-react-native' {
     // 是否是 字符串
     isString: (str: string) => boolean
 
-    // 字符串 替换 
+    // 字符串 替换
     replacePos: (
-      str: string, 
-      pos: number, 
-      replaceText: string, 
+      str: string,
+      pos: number,
+      replaceText: string,
       originTextLength: number | 0
     ) => string
   }
 
   // RXNumber
-  export const fsData = {numStr: string, local: number}
+  export const fsData = { numStr: string, local: number }
 
-  export function RXNumberObj() :fsData
+  export function RXNumberObj(): fsData
   /**
    * @this  字符串数字 净化(返回样式only 数字和点) 【目前大部分用于去掉逗号】
    *
    * @return  RXNumberObj()
    */
-  export function RXNumberStringCleanUp() :fsData
+  export function RXNumberStringCleanUp(): fsData
 
   /**
    * @this 字符串数字  添加逗号 （如果为小数，保留2位）
    * @return string ( 1020.2 ===>  1,020.2 )
    */
-  export function RXNumberStringComma(str: string | number) : string
+  export function RXNumberStringComma(str: string | number): string
 
   //2位小数
-  export function RXNumberCommentDecimal(str: string | number) : string
+  export function RXNumberCommentDecimal(str: string | number): string
 
   //最少保留一位小数
-  export function RXNumberCommentADecimal(str: string | number) : string
+  export function RXNumberCommentADecimal(str: string | number): string
 
   /**
    * @return '12' => '12.00'
@@ -138,13 +138,13 @@ declare module 'rx-base-react-native' {
    * @return '12' => 12.00
    * @return 12 => 12.00
    */
-  export function RXNumberDecimal(str: string | number) : number
+  export function RXNumberDecimal(str: string | number): number
 
-  export function isNumber(str: string | number) : boolean
+  export function isNumber(str: string | number): boolean
 
   // a <= b
-  export function LESS_THAN(a: number, b: number) : boolean
+  export function LESS_THAN(a: number, b: number): boolean
 
   // a >= b
-  export function GREATER_THAN(a: number, b: number) : boolean
+  export function GREATER_THAN(a: number, b: number): boolean
 }

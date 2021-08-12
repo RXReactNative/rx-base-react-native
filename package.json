@@ -21,9 +21,9 @@
     "url": "git@github.com:RXReactNative/rx-base-react-native.git"
   },
   "dependencies": {
-    "eslint-plugin-react": "^7.21.5",
     "prop-types": "*",
-    "react-native-keyboard-aware-scroll-view": "*"
+    "react-native-keyboard-aware-scroll-view": "*",
+    "@react-native-community/art": "*"
   },
   "peerDependencies": {
     "react": "*",

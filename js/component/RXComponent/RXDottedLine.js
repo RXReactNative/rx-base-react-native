@@ -5,21 +5,16 @@
  * @flow
  */
 import React, { Component } from 'react'
-import {
-  Dimensions,
-  ART
-} from 'react-native'
-
-// import ART from '@react-native-community/art'
+import {  Dimensions } from 'react-native'
 
 import PropTypes from 'prop-types'
 
-const {
+import {
   Surface, // 一个矩形可渲染的区域，是其他元素的容器
   Group, // 可容纳多个形状、文本和其他的分组
   Shape, // 形状定义，可填充
   Path, // 路径
-} = ART
+} from '@react-native-community/art'
 
 const DeviceWidth = Dimensions.get('window').width
 

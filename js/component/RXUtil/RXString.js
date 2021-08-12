@@ -31,7 +31,7 @@ const RXString = {
       str = replaceText + strObj
     } else if (pos < strObj.length - 1) {
       if (originTextLength <= 0) {
-        console.warn('error  replacePos=> originTextLength==0')
+        console.warn('error replacePos=> originTextLength==0')
         return ''
       }
       str =
